@@ -1,0 +1,70 @@
+body{
+background-color: grey;
+}
+div #main{
+	width: 400px;
+	margin: auto;
+	border: 1px solid black;
+	background-color: blue;
+	margin: 10px 10px 50px 10px;
+}
+div #header{
+background-color: white;
+height: 120px;
+padding: 50px;
+text-align: center;
+margin: 10px 50px 10px 50px;
+border: 3px dashed black;
+
+}
+.maincontent{
+margin-bottom: 10px;
+margin-top: 30px;
+min-height: 400px;
+background-color:white;
+text-align: center;
+font-size: large;
+}
+.login{
+margin-bottom: 10px;
+min-height: 150px;
+background-color:white;
+text-align: center;
+font-size: large;
+}
+.menu{
+margin-bottom: 10px;
+min-height: 300px;
+background-color:white;
+text-align: center;
+font-size: large;
+}
+.header {
+
+margin-bottom: 10px;
+min-height: 150px;
+background-color:white;
+text-align: center;
+font-size: large;
+
+	
+}
+
+div #header a:hover{
+    color: red;
+	font-weight: bold;
+	text-decoration: underline;
+
+}
+
+div #image{
+    text-align: center;
+}
+div #image img {
+	width: 500px;
+	margin-top: 50px;
+	border: 2px solid black;
+
+
+}
+
