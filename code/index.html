@@ -21,7 +21,8 @@
 <div class="container-fluid">
 
     <img src="mainpage.jpg" alt="main">
-        <a data-toggle="modal" href="#myModal" class="btn btn-primary">Login</a>
+    <div class="top"><h1>Guides</h1><h1>For</h1><h1>Free</h1></div>
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary">Login  <span class="glyphicon glyphicon-user"></span></a>
 
         <div id="myModal" class="modal fade in">
 
@@ -29,7 +30,7 @@
 
 
                     <a class="btn btn-alert" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <form class="form" action="/login.php">
+                    <form class="form" method="post" action="login.php">
                         First name:<br>
                         <input type="text" name="user">
                         <br>
