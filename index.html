@@ -1,43 +1,54 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+<head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
- <div class="conatiner-fluid">
-  <div class="row"> 
-      <div class="col-md-12">
-          <div class="header"> Header</div>
-      </div>
-  </div>
-   <div class="row">
-     <div class="col-md-3">
-     <div class="row">
-         <div class="col-md-12">
-             <div class="login"> Log in<br>
-              <img src="london" class="pull-left img-thumbnail"/>
-             </div>    
-      </div>
-     </div> 
-     <div class="row">
-      <div class="col-md-12">
-        <div class="menu"> Menu</div>
-     </div>
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+</head>
+<body>
+
+
+
+<div class="container-fluid">
+
+    <img src="mainpage.jpg" alt="main">
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary">Login</a>
+
+        <div id="myModal" class="modal fade in">
+
+                <div class="modal-content">
+
+
+                    <a class="btn btn-alert" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                    <form class="form" action="/login.php">
+                        First name:<br>
+                        <input type="text" name="user">
+                        <br>
+                        Last name:<br>
+                        <input type="text" name="password">
+                        <br><br>
+                        <input type="submit" value="Login">
+                    </form>
+
+
+
+                </div><!-- /.modal-content -->
+
+        </div><!-- /.modal -->
+
+
+
+
     </div>
-  </div>
-  <div class="col-md-9">
-    <div class="maincontent"> Maincontent</div>
-  </div>
-
- </div>
-</div>
-  </body>
+</body>
 </html>
+
