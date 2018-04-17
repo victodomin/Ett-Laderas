@@ -21,7 +21,7 @@ if (!$encontrado){
     header("refresh: 2; url=http://localhost/ett%20laderas/code/");
 
 }else{
-    echo "hola";
+    header('Location: maincontent.php');
 }
 
 

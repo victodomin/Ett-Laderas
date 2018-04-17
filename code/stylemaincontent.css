@@ -1,0 +1,55 @@
+.container-fluid{
+    background-color: whitesmoke;
+}
+
+.header{
+
+    text-align: left;
+    cursor: pointer;
+    height: 100px;
+    margin-top: 40px;
+}
+.header :hover{
+    background-color: whitesmoke;
+    color: blue;
+
+}
+.img{
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.content{
+    background-color: whitesmoke;
+    color: black;
+    height: 300px;
+    text-align: center;
+
+}
+.menu{
+    background-color: whitesmoke;
+    color: black;
+    height: 500px;
+    text-align:center;
+    margin-top: 60px;
+
+
+}
+
+.btn-primary.btn-primary{
+    background-color: lightskyblue;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.title{
+    text-shadow: 3px 2px black;
+    font-size: large;
+    font-family: "MS PGothic";
+
+}
+
+
+
