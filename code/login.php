@@ -6,14 +6,24 @@ $use=$_POST['user'];
 $pass=$_POST['password'];
 $encontrado=false;
 
+session_start();
+
 
 $result=mysqli_query($db,"select *from users ");
-while (($fila = mysqli_fetch_array($result))!=NULL){
 
-    if ($use==$fila['iduser'] && $pass== $fila['password']) $encontrado=true;
+    while (($fila = mysqli_fetch_array($result))!=NULL){
+
+        if ($use==$fila['iduser'] && $pass== $fila['password']){
+            $encontrado=true;
+            $_SESSION['login']=true;
+            $_SESSION['nom']=$fila['iduser'];
+            $_SESSION['pass']=$fila['password'];
+
+        }
+
+    }
 
 
-}
 
 if (!$encontrado){
     include 'alert.html';

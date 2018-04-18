@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,51 +18,16 @@
 <body>
 
 <div class="container-fluid">
-  <div class="row">
-         <div class="col-lg-2">
-             <div class="img">
-                 <img src="imgs/avatar.png" alt="avatar" width="40%" class="img-rounded">
-             </div>
+    <?php
+    include 'mainhead.php';
+    ?>
 
-
-         </div>
-         <div class="col-lg-5">
-            <div class="header">
-                <a href="index.html">Log out, user:.....</a>
-
-            </div>
-         </div>
-         <div class="col-lg-5">
-          <div class="title" style="width: 50px">
-          <h1>Ett Laderas</h1>
-          </div>
-         </div>
-
-
-
-  </div >
 
     <div class="row">
-        <div class="col-lg-4">
-            <div class="menu">
-                <div class="btn-primary">
-                    <a  href="client.php" class="btn-primary">Clients </a>
-                </div>
+        <?php
+        include 'mainmenu.php';
+        ?>
 
-                <div class="btn-primary">
-                    <a  href="ofer.php" class="btn-primary">Offers </a>
-                </div>
-                <div class="btn-primary">
-                    <a  href="employee.php" class="btn-primary">Employees </a>
-                </div>
-                <div class="btn-primary">
-                    <a  href="trin.php" class="btn-primary">Training</a>
-                </div>
-                <div class="btn-primary">
-                    <a  href="profile.php" class="btn-primary">Edit profile</a>
-                </div>
-            </div>
-        </div>
         <div class="col-lg-8">
             <div class="content">
                 <h2>Hello User!</h2>
