@@ -35,15 +35,15 @@ session_start();
                     <div class="col-lg-12">
                         <h1>change password</h1>
                         <form class="form" method="post" action=database.php>
+                            Nametag:<br>
+                            <input type="text" name="nam">
+                            <br>
                             Old password:<br>
                             <input type="text" name="oldpass">
                             <br>
                             New password<br>
-                            <input type="text" name="newpassword">
+                            <input type="text" name="newpass">
                             <br><br>
-                            Confirm password:<br>
-                            <input type="text" name="confpass">
-                            <br>
                             <input type="submit" value="CONFIRM" name="ok" >
                         </form>
                     </div>
