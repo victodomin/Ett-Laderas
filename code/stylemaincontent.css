@@ -55,5 +55,14 @@ background-color: whitesmoke;
 
 }
 
+.search_container{
+    margin-top: 80px;
+}
+.search_container button{
+    background-color: lightskyblue;
+    color: black;
+    margin-bottom: 10px;
+}
+
 
 

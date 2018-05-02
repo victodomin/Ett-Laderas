@@ -1,5 +1,10 @@
 <?php
-$db= mysqli_connect("localhost","root","","ett_laderas");
+
+
+include 'database.php';
+$data=new database();
+
+
 
 
 $use=$_POST['user'];
@@ -9,7 +14,7 @@ $encontrado=false;
 session_start();
 
 
-$result=mysqli_query($db,"select *from users ");
+$result=$data->getAllUsers();
 
     while (($fila = mysqli_fetch_array($result))!=NULL){
 

@@ -31,26 +31,13 @@ session_start();
 
         <div class="col-lg-8">
             <div class="content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>change password</h1>
-                        <form class="form" method="post" action=controlprofile.php>
-                            Nametag:<br>
-                            <input type="text" name="nam">
-                            <br>
-                            Old password:<br>
-                            <input type="text" name="oldpass">
-                            <br>
-                            New password<br>
-                            <input type="text" name="newpass">
-                            <br><br>
-                            <input type="submit" value="CONFIRM" name="ok" >
-                        </form>
-                    </div>
-
-
+                <div class="search_container">
+                    <h1> Look for an employee!!</h1>
+                    <form action="lookemployee.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button class="btn" type="submit" ><i class="fa fa-search"></i><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
                 </div>
-            </div>
         </div>
 
 
