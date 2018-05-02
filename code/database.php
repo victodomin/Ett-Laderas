@@ -40,18 +40,30 @@
 
     }
 
+     public function getAllEmployees(){
+         $db=mysqli_connect("localhost","root","","ett_laderas");
+
+         $sql = "select *from employees ";
+         return mysqli_query($db,$sql);
+     }
+
     public function findEmployee($name)
     {
-        $result = $this->getAllUsers();
+        $array=null;
+        $result = $this->getAllEmployees();
 
+          if($result->num_rows>0){
+              while ($fila = $result->fetch_assoc()) {
 
-        while (($fila = mysqli_fetch_array($result)) != NULL) {
+                       if ($name == $fila['name'] or $name == $fila['surname']) {
 
-            if ($name == $fila['name'] or $name == $fila['surname']) {
+                          $array[] = $fila;
+                          }
+                     }
 
-                $array[] = $fila;
-            }
-        }
+             }
+
+              return $array;
 
     }
 

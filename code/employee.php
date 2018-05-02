@@ -33,7 +33,7 @@ session_start();
             <div class="content">
                 <div class="search_container">
                     <h1> Look for an employee!!</h1>
-                    <form action="lookemployee.php">
+                    <form  method="post" action="lookemployee.php" >
                         <input type="text" placeholder="Search.." name="search">
                         <button class="btn" type="submit" ><i class="fa fa-search"></i><span class="glyphicon glyphicon-search"></span></button>
                     </form>

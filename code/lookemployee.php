@@ -31,13 +31,24 @@ session_start();
 
         <div class="col-lg-8">
              <?php include 'database.php';
+             $emp = $_POST['search'];
+             if($emp!=null) {
 
-             $data= new database();
-             $data->findEmployee($_POST['search']);
-             
+                 $data = new database();
+                 $employee = $data->findEmployee($emp);
+                 if($employee){
+                     foreach ($employee as $array ) {
+                         echo $array['name'] . " ";
+                         echo $array['surname'] . " ";
+                         echo $array['socialsecurity'] . " ";
+                         echo $array['numberaccount'] . " ";
+                         echo $array['email'] . " ";
+                         echo $array['residence'] . " <br>";
 
+                     }
+                 }else echo" no data found";
 
-
+             }else header('Location: employee.php');
 
              ?>
 
