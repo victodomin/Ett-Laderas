@@ -34,9 +34,9 @@ include 'actionempolyee.php';
             <div class="container">
 
 
-                   <div class="row">
+                   <div class="row" style="background-color: lightcyan" >
 
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="margin-bottom: 50px">
                                <?php
                                   $emp = $_POST['search'];
                                   if($emp!=null) {
@@ -59,22 +59,45 @@ include 'actionempolyee.php';
                                   ?>
 
                         </div>
-                        <div class="row" style="margin-top: 25px">
+                        <div class="row" style="margin-top: 25px" style="" >
 
-                           <div class="col-lg-6">
+                           <div class="col-lg-3">
                                <form method="post">
-                                   <button class="btn-primary" type="submit" style="background-color: red">Add to an offer</button>
+                                   <button class="btn-primary" type="submit" style="background-color: grey">Add to an offer</button>
+
                                </form>
                            </div>
-                           <div class="col-lg-6">
-                               <form method="post">
-                                   <button class="btn-primary" type="submit" style="background-color: red">Make a payment</button>
-                               </form>
-                           </div>
-                            
+                            <div class="col-lg-9" style="text-align: left">
+                                <?php
+                                $offers= $data->showAllOffers();
+                                if($offers!=null) {
+
+                                    foreach ($offers as $value) {
+                                        echo  $value['idoffer']." ";
+                                        echo  $value['idclient']." ";
+                                        echo  $value['sector']." ";
+                                        echo  $value['duration']." ";
+                                        echo  $value['salary']." ";
+                                        echo  $value['description']." </br>";
+
+                                    }
+                                }else echo" no job offers to apply";
+
+                                ?>
+                            </div>
+
+
 
 
                        </div>;
+                       <div class="row" style="margin-top: 30px">
+
+                           <div class="col-lg-12">
+                               <form method="post">
+                                   <button class="btn-primary" type="submit" style="background-color: grey" >Make a payment</button>
+                               </form>
+                           </div>
+                       </div>
 
 
                      </div>

@@ -11,6 +11,20 @@
         return mysqli_query($db,$sql);
      }
 
+     public function  getAllOffers(){
+         $db=mysqli_connect("localhost","root","","ett_laderas");
+
+         $sql = "select *from joboffers ";
+         return mysqli_query($db,$sql);
+     }
+
+     public function getAllEmployees(){
+         $db=mysqli_connect("localhost","root","","ett_laderas");
+
+         $sql = "select *from employees ";
+         return mysqli_query($db,$sql);
+     }
+
      public function changePass($res,$nres,$uss)
     {
         $db=mysqli_connect("localhost","root","","ett_laderas");
@@ -40,12 +54,7 @@
 
     }
 
-     public function getAllEmployees(){
-         $db=mysqli_connect("localhost","root","","ett_laderas");
 
-         $sql = "select *from employees ";
-         return mysqli_query($db,$sql);
-     }
 
     public function findEmployee($emp)
     {
@@ -72,6 +81,23 @@
 
               return null;
 
+    }
+
+
+    public function showAllOffers(){
+
+         $result=$this->getAllOffers();
+         $array=null;
+
+         if ($result->num_rows>0){
+
+             while ($row=$result->fetch_assoc()){
+
+                 $array[]=$row;
+             }
+
+         }
+         return $array;
     }
 
 
