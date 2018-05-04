@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-
+include 'database.php';
+include 'actionempolyee.php';
 
 ?>
 
@@ -30,28 +31,57 @@ session_start();
         ?>
 
         <div class="col-lg-8">
-             <?php include 'database.php';
-             $emp = $_POST['search'];
-             if($emp!=null) {
+            <div class="container">
 
-                 $data = new database();
-                 $employee = $data->findEmployee($emp);
-                 if($employee){
-                     foreach ($employee as $array ) {
-                         echo $array['name'] . " ";
-                         echo $array['surname'] . " ";
-                         echo $array['socialsecurity'] . " ";
-                         echo $array['numberaccount'] . " ";
-                         echo $array['email'] . " ";
-                         echo $array['residence'] . " <br>";
 
-                     }
-                 }else echo" no data found";
+                   <div class="row">
 
-             }else header('Location: employee.php');
+                        <div class="col-lg-12">
+                               <?php
+                                  $emp = $_POST['search'];
+                                  if($emp!=null) {
 
-             ?>
+                                       $data = new database();
+                                       $employee = $data->findEmployee($emp);
 
+                                            if($employee){
+                                                          echo $employee->getName()." ";
+                                                          echo $employee->getSurname()." ";
+                                                          echo $employee->getDni()." ";
+                                                          echo $employee->getAccount()." ";
+                                                          echo $employee->getSS()." ";
+                                                          echo $employee->getEmail()." ";
+                                                          echo $employee->getAddress()." ";
+
+                                                    }else echo" no data found";
+                                  }else header('Location: viewemployee.php');
+
+                                  ?>
+
+                        </div>
+                        <div class="row" style="margin-top: 25px">
+
+                           <div class="col-lg-6">
+                               <form method="post">
+                                   <button class="btn-primary" type="submit" style="background-color: red">Add to an offer</button>
+                               </form>
+                           </div>
+                           <div class="col-lg-6">
+                               <form method="post">
+                                   <button class="btn-primary" type="submit" style="background-color: red">Make a payment</button>
+                               </form>
+                           </div>
+                            
+
+
+                       </div>;
+
+
+                     </div>
+
+
+
+            </div>
         </div>
 
 

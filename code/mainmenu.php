@@ -6,7 +6,7 @@
                 <a  href="ofer.php" class="btn-primary">Offers </a>
             </div>
             <div class="btn-primary">
-                <a  href="employee.php" class="btn-primary">Employees </a>
+                <a  href="viewemployee.php" class="btn-primary">Employees </a>
             </div>
 
             <div class="btn-primary">

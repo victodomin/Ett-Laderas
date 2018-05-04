@@ -47,23 +47,30 @@
          return mysqli_query($db,$sql);
      }
 
-    public function findEmployee($name)
+    public function findEmployee($emp)
     {
-        $array=null;
+
         $result = $this->getAllEmployees();
 
           if($result->num_rows>0){
+
               while ($fila = $result->fetch_assoc()) {
 
-                       if ($name == $fila['name'] or $name == $fila['surname']) {
 
-                          $array[] = $fila;
+                       if ($emp == $fila['dni']) {
+                           include 'employee.php';
+
+
+                             return new employee($fila['dni'],$fila['socialsecurity'],$fila['numberaccount'],
+                                 $fila['name'],$fila['surname'],$fila['email'],$fila['residence']);
+
+
                           }
                      }
 
              }
 
-              return $array;
+              return null;
 
     }
 

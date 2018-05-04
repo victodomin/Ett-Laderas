@@ -1,50 +1,78 @@
 <?php
 
-session_start();
 
+class employee{
+    private $dni;
+    private $SS;
+    private $account;
+    private $name;
+    private $surname;
+    private $email;
+    private $address;
 
-?>
+    function __construct($dni,$SS,$account,$name,$surname,$email,$address){
+        $this->dni=$dni;
+        $this->SS=$SS;
+        $this->account=$account;
+        $this->name=$name;
+        $this->surname=$surname;
+        $this->email=$email;
+        $this->address=$address;
+    }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+    /**
+     * @return mixed
+     */
+    public function getAccount()
+    {
+        return $this->account;
+    }
 
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
 
-    <link rel="stylesheet" type="text/css" href="stylemaincontent.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+    /**
+     * @return mixed
+     */
+    public function getDni()
+    {
+        return $this->dni;
+    }
 
-<div class="container-fluid">
-    <?php
-    include 'mainhead.php';
-    ?>
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 
-    <div class="row">
-        <?php
-        include 'mainmenu.php';
-        ?>
+    /**
+     * @return mixed
+     */
+    public function getSS()
+    {
+        return $this->SS;
+    }
 
-        <div class="col-lg-8">
-            <div class="content">
-                <div class="search_container">
-                    <h1> Look for an employee!!</h1>
-                    <form  method="post" action="lookemployee.php" >
-                        <input type="text" placeholder="Search.." name="search">
-                        <button class="btn" type="submit" ><i class="fa fa-search"></i><span class="glyphicon glyphicon-search"></span></button>
-                    </form>
-                </div>
-        </div>
-
-
-    </div>
-</div>
-
-
-
-</body>
-</html>
+    /**
+     * @return mixed
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+}
