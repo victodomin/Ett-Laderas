@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2018 at 04:04 AM
+-- Generation Time: May 05, 2018 at 10:53 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -63,11 +63,8 @@ CREATE TABLE `hiredemployees` (
 --
 
 INSERT INTO `hiredemployees` (`dni`, `idoffer`) VALUES
-('2354252', '7777'),
-('2354252', '7788'),
-('2435342', '7777'),
-('3243523', '7777'),
-('3243523', '7788');
+('2354252', '8888'),
+('3243523', '9999');
 
 -- --------------------------------------------------------
 
@@ -77,10 +74,9 @@ INSERT INTO `hiredemployees` (`dni`, `idoffer`) VALUES
 
 CREATE TABLE `joboffers` (
   `idoffer` varchar(8) NOT NULL,
-  `idclient` varchar(8) NOT NULL,
   `sector` varchar(8) NOT NULL,
-  `duration` int(120) NOT NULL,
-  `salary` int(120) NOT NULL,
+  `duration` int(100) NOT NULL,
+  `salary` int(100) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -88,9 +84,9 @@ CREATE TABLE `joboffers` (
 -- Dumping data for table `joboffers`
 --
 
-INSERT INTO `joboffers` (`idoffer`, `idclient`, `sector`, `duration`, `salary`, `description`) VALUES
-('7788', '0000', 'IT', 65, 2400, 'Hi programmers needed to hack nsa'),
-('7777', '0000', 'TEC', 31, 1400, 'It engineers needed for developing a new app');
+INSERT INTO `joboffers` (`idoffer`, `sector`, `duration`, `salary`, `description`) VALUES
+('8888', 'TEC', 30, 1300, 'web designer for tec company'),
+('9999', 'IT', 120, 7000, 'coder for engeniring lab at complutense');
 
 -- --------------------------------------------------------
 
@@ -112,7 +108,8 @@ INSERT INTO `payment` (`idpayment`, `dni`, `cuantity`) VALUES
 (226, '3243523', 200),
 (457, '3243523', 500),
 (494, '3243523', 240),
-(671, '2354252', 1200);
+(671, '2354252', 1200),
+(851, '3243523', 8);
 
 -- --------------------------------------------------------
 
@@ -155,9 +152,7 @@ ALTER TABLE `hiredemployees`
 -- Indexes for table `joboffers`
 --
 ALTER TABLE `joboffers`
-  ADD PRIMARY KEY (`idclient`,`sector`),
-  ADD UNIQUE KEY `idoffer` (`idoffer`),
-  ADD KEY `sector` (`sector`);
+  ADD PRIMARY KEY (`idoffer`);
 
 --
 -- Indexes for table `payment`
@@ -183,13 +178,6 @@ ALTER TABLE `users`
 ALTER TABLE `hiredemployees`
   ADD CONSTRAINT `hiredemployees_ibfk_1` FOREIGN KEY (`dni`) REFERENCES `employees` (`dni`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `hiredemployees_ibfk_2` FOREIGN KEY (`idoffer`) REFERENCES `joboffers` (`idoffer`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `joboffers`
---
-ALTER TABLE `joboffers`
-  ADD CONSTRAINT `joboffers_ibfk_1` FOREIGN KEY (`idclient`) REFERENCES `clients` (`idclient`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `joboffers_ibfk_2` FOREIGN KEY (`sector`) REFERENCES `clients` (`sector`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `payment`
