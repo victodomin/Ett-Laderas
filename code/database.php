@@ -11,6 +11,13 @@
         return mysqli_query($db,$sql);
      }
 
+     public  function getAllPayments(){
+         $db=mysqli_connect("localhost","root","","ett_laderas");
+
+         $sql = "select *from payment ";
+         return mysqli_query($db,$sql);
+     }
+
      public function  getAllOffers(){
          $db=mysqli_connect("localhost","root","","ett_laderas");
 
@@ -100,34 +107,47 @@
          return $array;
     }
 
+public function isIDemp($employee){
+         $found=false;
+         $resutl=$this->getAllEmployees();
+         while($row=$resutl->fetch_assoc()){
+             if($row['dni']==$employee)$found= true;
 
+         }
+
+         return $found;
 
 }
 
+    public function AddPayment($amount,$employee){
+         if($this->isIDemp($employee)==true){
+             $result=$this->getAllPayments();
+             $id=rand(0,999);
+             $found=false;
+             $emp=false;
+             if ($result->num_rows>0){
+
+                 while ($row=$result->fetch_assoc()){
+                     if($row['idpayment']==$id) $found==true;
 
 
+                 }
 
+             }
+             if($found) $this->AddPayment($amount,$employee);
+             else $sql="INSERT INTO `payment` (`idpayment`, `dni`,  `cuantity`) VALUES ('$id', '$employee', '$amount');";
 
+             $db=mysqli_connect("localhost","root","","ett_laderas");
 
+             mysqli_query($db,$sql);
+             echo"payment ok";
+         }else echo "no employee found";
 
-
-
-
-
-
-
-
-
-
-/*if (isset($_POST['action'])) {
-    switch ($_POST['action']) {
-        case 'insert':
-            insert();
-            break;
-        case 'select':
-            select();
-            break;
     }
+
+
+
 }
-*/
+
+
 ?>

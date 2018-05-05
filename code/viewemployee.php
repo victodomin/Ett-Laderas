@@ -2,7 +2,7 @@
 
 session_start();
 
-
+include 'database.php';
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +39,39 @@ session_start();
                     </form>
                 </div>
         </div>
+            <div class="row">
+                    <div class="col-lg-6">
+                        <form  method="post" action="">
+                            <input type="text" name="employee" value="ideployee" style="width: 70px">
+                            <input type="text" name="cuantity" value="amount" style="width: 70px">
+                            <button class="btn-primary" type="submit"  name="pay" style="background-color: grey" >Make a payment</button>
+
+                        </form>
+                    </div>
+                        <div class="col-lg-6">
+                            <form method="post">
+                                <input type="text" name="offer" value="Idoffer" style="width: 70px ">
+                                <input type="text" name="emplo" value="IDemployee" style="width: 70px ">
+                                <button class="btn-primary" type="submit" style="background-color: grey">Add to an offer</button>
+
+
+
+                            </form>
+
+                        </div>
+
+                <?php
+
+                if(isset($_POST['cuantity']) && isset($_POST['employee'])){
+                    $data=new database();
+                    $data->AddPayment($_POST['cuantity'],$_POST['employee']);
+                }
+                if(isset($_POST['offer']) && isset($_POST['emplo'])){
+                    $data=new database();
+                    $data->AddPayment($_POST['offer'],$_POST['emplo']);
+                }
+                ?>
+            </div>
 
 
     </div>

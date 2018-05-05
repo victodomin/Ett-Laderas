@@ -1,77 +1,67 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: victo
- * Date: 04/05/2018
- * Time: 12:47
- */
 
-class offers{
+session_start();
+include  'database.php';
+?>
 
-    private $idoffer;
-    private $idclient;
-    private $sector;
-    private $duration;
-    private $salary;
-    private $description;
-    function  __construct($idoffer,$idclient,$sector,$duration,$salary,$description){
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-        $this->idoffer=$idoffer;
-        $this->idclient=$idclient;
-        $this->sector=$sector;
-        $this->duration=$duration;
-        $this->salary=$salary;
-        $this->description=$description;
-    }
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
+    <link rel="stylesheet" type="text/css" href="stylemaincontent.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 
-    /**
-     * @return mixed
-     */
-    public function getDuration()
-    {
-        return $this->duration;
-    }
+<div class="container-fluid">
+    <?php
+    include 'mainhead.php';
+    ?>
 
-    /**
-     * @return mixed
-     */
-    public function getIdclient()
-    {
-        return $this->idclient;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getIdoffer()
-    {
-        return $this->idoffer;
-    }
+    <div class="row">
+        <?php
+        include 'mainmenu.php';
+        ?>
 
-    /**
-     * @return mixed
-     */
-    public function getSalary()
-    {
-        return $this->salary;
-    }
+        <div class="col-lg-8">
+            <div class="content">
+                <?php
+                  $data=new database();
 
-    /**
-     * @return mixed
-     */
-    public function getSector()
-    {
-        return $this->sector;
-    }
+                $offers= $data->showAllOffers();
+                if($offers!=null) {
+
+
+                    foreach ($offers as $value) {
+                        echo  "idoffer:".$value['idoffer']." ";
+                        echo  "idclient:".$value['idclient']." ";
+                        echo  "sector:".$value['sector']." ";
+                        echo  "duration:".$value['duration']." ";
+                        echo  "salary:".$value['salary']." </br>";
+                        echo  "description:".$value['description']." </br>";
+                        echo"------------------------------------------------------------</br>";
+
+                    }
+                }else echo" no job offers ";
 
 
 
-}
+                ?>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
+
+
+

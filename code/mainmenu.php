@@ -3,7 +3,7 @@
         <div class="menu">
 
             <div class="btn-primary">
-                <a  href="ofer.php" class="btn-primary">Offers </a>
+                <a  href="offers.php" class="btn-primary">Offers </a>
             </div>
             <div class="btn-primary">
                 <a  href="viewemployee.php" class="btn-primary">Employees </a>

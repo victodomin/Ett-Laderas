@@ -2,7 +2,7 @@
 
 session_start();
 include 'database.php';
-include 'actionempolyee.php';
+
 
 ?>
 
@@ -16,6 +16,9 @@ include 'actionempolyee.php';
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
 </head>
 <body>
 
@@ -38,67 +41,28 @@ include 'actionempolyee.php';
 
                         <div class="col-lg-12" style="margin-bottom: 50px">
                                <?php
-                                  $emp = $_POST['search'];
-                                  if($emp!=null) {
+                               $emp = $_POST['search'];
 
-                                       $data = new database();
-                                       $employee = $data->findEmployee($emp);
+                               $data = new database();
+                               $employee = $data->findEmployee($emp);
+                               if( $employee!=null){
 
-                                            if($employee){
-                                                          echo $employee->getName()." ";
-                                                          echo $employee->getSurname()." ";
-                                                          echo $employee->getDni()." ";
-                                                          echo $employee->getAccount()." ";
-                                                          echo $employee->getSS()." ";
-                                                          echo $employee->getEmail()." ";
-                                                          echo $employee->getAddress()." ";
 
-                                                    }else echo" no data found";
-                                  }else header('Location: viewemployee.php');
+                                   echo "Name:".$employee->getName()."     ";
+                                   echo "Surname:".$employee->getSurname()."    ";
+                                   echo "DNI:".$employee->getDni()."    ";
+                                   echo "Account:".$employee->getAccount()."    ";
+                                   echo "SS:".$employee->getSS()."         ";
+                                   echo "Email:".$employee->getEmail()."         ";
+                                   echo "Address:".$employee->getAddress()."     ";
 
+                               }else {
+                                   echo"no data found";
+                                   }
+                                   
                                   ?>
 
                         </div>
-                        <div class="row" style="margin-top: 25px" style="" >
-
-                           <div class="col-lg-3">
-                               <form method="post">
-                                   <button class="btn-primary" type="submit" style="background-color: grey">Add to an offer</button>
-
-                               </form>
-                           </div>
-                            <div class="col-lg-9" style="text-align: left">
-                                <?php
-                                $offers= $data->showAllOffers();
-                                if($offers!=null) {
-
-                                    foreach ($offers as $value) {
-                                        echo  $value['idoffer']." ";
-                                        echo  $value['idclient']." ";
-                                        echo  $value['sector']." ";
-                                        echo  $value['duration']." ";
-                                        echo  $value['salary']." ";
-                                        echo  $value['description']." </br>";
-
-                                    }
-                                }else echo" no job offers to apply";
-
-                                ?>
-                            </div>
-
-
-
-
-                       </div>;
-                       <div class="row" style="margin-top: 30px">
-
-                           <div class="col-lg-12">
-                               <form method="post">
-                                   <button class="btn-primary" type="submit" style="background-color: grey" >Make a payment</button>
-                               </form>
-                           </div>
-                       </div>
-
 
                      </div>
 
