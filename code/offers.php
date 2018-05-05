@@ -37,21 +37,63 @@ include  'database.php';
                 if($offers!=null) {
 
 
-                    foreach ($offers as $value) {
-                        echo  "idoffer:".$value['idoffer']." ";
-                        echo  "idclient:".$value['idclient']." ";
-                        echo  "sector:".$value['sector']." ";
-                        echo  "duration:".$value['duration']." ";
-                        echo  "salary:".$value['salary']." </br>";
-                        echo  "description:".$value['description']." </br>";
-                        echo"------------------------------------------------------------</br>";
+                    foreach ($offers as $value) {?>
+                       <tr>
+                          <td> <?php echo  "idoffer:".$value['idoffer']." ";?></td>
+                           <td><?php echo  "sector:".$value['sector']." ";?></td>
+                           <td><?php echo  "duration:".$value['duration']." ";?></td>
+                           <td><?php echo  "salary:".$value['salary']." </br>";?></td>
+                           <td><?php echo  "description:".$value['description']?></td>
 
-                    }
+                           <td>
+                               <a onclick="return confirm('Want to delete this offer?')" href="offers.php?offer=<?php echo $value['idoffer']?>"
+                                  class="btn btn-danger">Delete</a></br>
+                           </td>
+                           <td><?php echo "---------------------------------------------------------"?></td></br>
+
+                       </tr>
+
+                  <?php  }
                 }else echo" no job offers ";
 
 
 
+
+                if (isset($_GET['offer'])){
+                    $off=$_GET['offer'];
+                    $dats=new database();
+                    $result=$dats->deleteOffer($off);
+                    if($result){
+                        ?>
+                        <script>
+                            alert("offer successfully deleted");
+                        </script>
+                        <?php
+                        header("refresh: 2; url=http://localhost/Ett-Laderas/code/offers.php");
+                    }else {
+                        ?>
+                        <script>
+                            alert("could not delete the offer");
+                        </script>
+
+                        <?php
+                    }
+                }
                 ?>
+
+
+
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <a class="btn btn-alert" href="actionoffer" </a>
+
+
+                </div>
+
 
             </div>
         </div>

@@ -171,6 +171,18 @@ public function isIDemp($employee){
 
 
 
+    public function  deleteOffer($off){
+
+            $db=mysqli_connect("localhost","root","","ett_laderas");
+            $sql="DELETE FROM `joboffers` WHERE `joboffers`.`idoffer` = '$off' ";
+            mysqli_query($db,$sql);
+
+            return true;
+
+    }
+
+
+
 }
 
 
