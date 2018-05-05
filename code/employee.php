@@ -1,7 +1,7 @@
 <?php
 
 
-class employee{
+class employee extends database {
     private $dni;
     private $SS;
     private $account;
@@ -76,6 +76,31 @@ class employee{
         return $this->surname;
     }
 
+  public function getjobs(){
+        $array=null;
+        $offers=$this->getAllHiredEmployees();
+        if($offers->num_rows>0){
+            while ($row=$offers->fetch_assoc()){
+                       if($row['dni']==$this->dni){
+                           $array[]=$row;
+                       }
+            }
+        }
+        return $array;
+  }
 
+  public function  getpaymentemp(){
+
+      $array=null;
+      $offers=$this->getAllPayments();
+      if($offers->num_rows>0){
+          while ($row=$offers->fetch_assoc()){
+              if($row['dni']==$this->dni){
+                  $array[]=$row;
+              }
+          }
+      }
+      return $array;
+  }
 
 }

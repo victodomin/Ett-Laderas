@@ -24,7 +24,12 @@
          $sql = "select *from joboffers ";
          return mysqli_query($db,$sql);
      }
+         public function getAllHiredEmployees(){
+    $db=mysqli_connect("localhost","root","","ett_laderas");
 
+               $sql = "select *from hiredemployees ";
+               return mysqli_query($db,$sql);
+         }
      public function getAllEmployees(){
          $db=mysqli_connect("localhost","root","","ett_laderas");
 
@@ -124,7 +129,7 @@ public function isIDemp($employee){
              $result=$this->getAllPayments();
              $id=rand(0,999);
              $found=false;
-             $emp=false;
+
              if ($result->num_rows>0){
 
                  while ($row=$result->fetch_assoc()){
@@ -142,6 +147,25 @@ public function isIDemp($employee){
              mysqli_query($db,$sql);
              echo"payment ok";
          }else echo "no employee found";
+
+    }
+
+    public function addemptoOffer($idoffer,$dni){
+        $hired=$this->getAllHiredEmployees();
+         $found=false;
+
+         if($hired->num_rows>0){
+             while($row=$hired->fetch_assoc()){
+                 if($row['idoffer']==$idoffer && $row['dni']==$dni)$found=true;
+             }
+
+         }
+         if(!$found){
+             $db=mysqli_connect("localhost","root","","ett_laderas");
+             $sql="INSERT INTO `hiredemployees` (`dni`, `idoffer`) VALUES ('$dni', '$idoffer');";
+             mysqli_query($db,$sql);
+         }else echo "cant add employee to offer";
+
 
     }
 

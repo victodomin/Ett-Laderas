@@ -68,7 +68,7 @@ include 'database.php';
                 }
                 if(isset($_POST['offer']) && isset($_POST['emplo'])){
                     $data=new database();
-                    $data->AddPayment($_POST['offer'],$_POST['emplo']);
+                    $data->addemptoOffer($_POST['offer'],$_POST['emplo']);
                 }
                 ?>
             </div>

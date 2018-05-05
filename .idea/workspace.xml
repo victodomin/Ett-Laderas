@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f5933b5-b23d-4a84-aa25-e559aaafab0c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/code/actionempolyee.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/code/database.php" afterPath="$PROJECT_DIR$/code/database.php" />
       <change beforePath="$PROJECT_DIR$/code/employee.php" afterPath="$PROJECT_DIR$/code/employee.php" />
       <change beforePath="$PROJECT_DIR$/code/lookemployee.php" afterPath="$PROJECT_DIR$/code/lookemployee.php" />
-      <change beforePath="$PROJECT_DIR$/code/mainmenu.php" afterPath="$PROJECT_DIR$/code/mainmenu.php" />
-      <change beforePath="$PROJECT_DIR$/code/offers.php" afterPath="$PROJECT_DIR$/code/offers.php" />
       <change beforePath="$PROJECT_DIR$/code/viewemployee.php" afterPath="$PROJECT_DIR$/code/viewemployee.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +49,8 @@
       <file leaf-file-name="lookemployee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/lookemployee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            <state relative-caret-position="564">
+              <caret line="87" column="60" lean-forward="false" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -63,8 +59,8 @@
       <file leaf-file-name="offers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/offers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="289">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,8 +69,8 @@
       <file leaf-file-name="employee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="394">
+              <caret line="91" column="35" lean-forward="true" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -83,15 +79,17 @@
       <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="142" column="30" lean-forward="false" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
+            <state relative-caret-position="445">
+              <caret line="162" column="13" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
               <folding>
-                <marker date="1525477086642" expanded="true" signature="149:167" ph="select *from... users" />
-                <marker date="1525477086642" expanded="true" signature="342:362" ph="select *from... payment" />
-                <marker date="1525477086642" expanded="true" signature="536:558" ph="select *from... joboffers" />
-                <marker date="1525477086642" expanded="true" signature="734:756" ph="select *from... employees" />
-                <marker date="1525477086642" expanded="true" signature="1239:1304" ph="update users... " />
-                <marker date="1525477086642" expanded="true" signature="3334:3428" ph="INSERT INTO `payment`... " />
+                <marker date="1525485254086" expanded="true" signature="149:167" ph="select *from... users" />
+                <marker date="1525485254086" expanded="true" signature="342:362" ph="select *from... payment" />
+                <marker date="1525485254086" expanded="true" signature="536:558" ph="select *from... joboffers" />
+                <marker date="1525485254086" expanded="true" signature="743:770" ph="select *from... hiredemployees" />
+                <marker date="1525485254086" expanded="true" signature="955:977" ph="select *from... employees" />
+                <marker date="1525485254086" expanded="true" signature="1460:1525" ph="update users... " />
+                <marker date="1525485254086" expanded="true" signature="3531:3625" ph="INSERT INTO `payment`... " />
+                <marker date="1525485254086" expanded="true" signature="4237:4312" ph="INSERT INTO `hiredemployees`... " />
               </folding>
             </state>
           </provider>
@@ -101,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/code/viewemployee.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
-              <caret line="51" column="47" lean-forward="false" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+              <caret line="70" column="40" lean-forward="false" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -179,13 +177,13 @@
         <option value="$PROJECT_DIR$/code/stylemaincontent.css" />
         <option value="$PROJECT_DIR$/code/offeremployee.php" />
         <option value="$PROJECT_DIR$/code/actionempolyee.php" />
-        <option value="$PROJECT_DIR$/code/employee.php" />
-        <option value="$PROJECT_DIR$/code/database.php" />
         <option value="$PROJECT_DIR$/code/imgs/offers.php" />
-        <option value="$PROJECT_DIR$/code/lookemployee.php" />
-        <option value="$PROJECT_DIR$/code/viewemployee.php" />
         <option value="$PROJECT_DIR$/code/mainmenu.php" />
         <option value="$PROJECT_DIR$/code/offers.php" />
+        <option value="$PROJECT_DIR$/code/employee.php" />
+        <option value="$PROJECT_DIR$/code/viewemployee.php" />
+        <option value="$PROJECT_DIR$/code/database.php" />
+        <option value="$PROJECT_DIR$/code/lookemployee.php" />
       </list>
     </option>
   </component>
@@ -326,12 +324,12 @@
       <workItem from="1525294691537" duration="2802000" />
       <workItem from="1525344357108" duration="8659000" />
       <workItem from="1525435630701" duration="284000" />
-      <workItem from="1525446274518" duration="15637000" />
+      <workItem from="1525446274518" duration="21441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115856000" />
+    <option name="totallyTimeSpent" value="121660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -496,41 +494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="142" column="30" lean-forward="false" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
-          <folding>
-            <marker date="1525477086642" expanded="true" signature="149:167" ph="select *from... users" />
-            <marker date="1525477086642" expanded="true" signature="342:362" ph="select *from... payment" />
-            <marker date="1525477086642" expanded="true" signature="536:558" ph="select *from... joboffers" />
-            <marker date="1525477086642" expanded="true" signature="734:756" ph="select *from... employees" />
-            <marker date="1525477086642" expanded="true" signature="1239:1304" ph="update users... " />
-            <marker date="1525477086642" expanded="true" signature="3334:3428" ph="INSERT INTO `payment`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/imgs/offers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/lookemployee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -543,10 +510,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/mainmenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="91" column="35" lean-forward="true" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/viewemployee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
-          <caret line="51" column="47" lean-forward="false" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <caret line="70" column="40" lean-forward="false" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -558,18 +541,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/mainmenu.php">
+    <entry file="file://$PROJECT_DIR$/code/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="445">
+          <caret line="162" column="13" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+          <folding>
+            <marker date="1525485254086" expanded="true" signature="149:167" ph="select *from... users" />
+            <marker date="1525485254086" expanded="true" signature="342:362" ph="select *from... payment" />
+            <marker date="1525485254086" expanded="true" signature="536:558" ph="select *from... joboffers" />
+            <marker date="1525485254086" expanded="true" signature="743:770" ph="select *from... hiredemployees" />
+            <marker date="1525485254086" expanded="true" signature="955:977" ph="select *from... employees" />
+            <marker date="1525485254086" expanded="true" signature="1460:1525" ph="update users... " />
+            <marker date="1525485254086" expanded="true" signature="3531:3625" ph="INSERT INTO `payment`... " />
+            <marker date="1525485254086" expanded="true" signature="4237:4312" ph="INSERT INTO `hiredemployees`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/lookemployee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="87" column="60" lean-forward="false" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/offers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        <state relative-caret-position="289">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>

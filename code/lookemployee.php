@@ -54,12 +54,38 @@ include 'database.php';
                                    echo "Account:".$employee->getAccount()."    ";
                                    echo "SS:".$employee->getSS()."         ";
                                    echo "Email:".$employee->getEmail()."         ";
-                                   echo "Address:".$employee->getAddress()."     ";
+                                   echo "Address:".$employee->getAddress()."    </br> ";
 
                                }else {
-                                   echo"no data found";
+                                   echo"no data found </br>" ;
                                    }
-                                   
+
+                               $offers=$employee->getjobs();
+                               echo "-------------------- jobs ------------------------- </br>";
+                               if($offers!=null) {
+
+                               foreach ($offers as $value) {
+                                   echo  "dni:".$value['dni']."  ";
+                                   echo  "IDoffer:".$value['idoffer']." </br>";
+
+                               }
+
+
+                               }else echo " no jobs</br>";
+
+                                 $payment=$employee->getpaymentemp();
+                               echo "-------------------- payments ------------------------- </br>";
+                               if($payment!=null) {
+
+                                   foreach ($payment as $value) {
+                                       echo  "dni:".$value['dni']."  ";
+                                       echo  "idpayment:".$value['idpayment']." ";
+                                       echo  "cuantity:".$value['cuantity']." </br>";
+
+                                   }
+
+
+                               }else echo " no payments</br>";
                                   ?>
 
                         </div>
