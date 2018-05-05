@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f5933b5-b23d-4a84-aa25-e559aaafab0c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/code/database.php" afterPath="$PROJECT_DIR$/code/database.php" />
-      <change beforePath="$PROJECT_DIR$/code/employee.php" afterPath="$PROJECT_DIR$/code/employee.php" />
-      <change beforePath="$PROJECT_DIR$/code/lookemployee.php" afterPath="$PROJECT_DIR$/code/lookemployee.php" />
-      <change beforePath="$PROJECT_DIR$/code/viewemployee.php" afterPath="$PROJECT_DIR$/code/viewemployee.php" />
-    </list>
+    <list default="true" id="8f5933b5-b23d-4a84-aa25-e559aaafab0c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +54,8 @@
       <file leaf-file-name="offers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/offers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -324,12 +319,12 @@
       <workItem from="1525294691537" duration="2802000" />
       <workItem from="1525344357108" duration="8659000" />
       <workItem from="1525435630701" duration="284000" />
-      <workItem from="1525446274518" duration="21441000" />
+      <workItem from="1525446274518" duration="21506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121660000" />
+    <option name="totallyTimeSpent" value="121725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -568,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/offers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
