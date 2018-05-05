@@ -51,12 +51,12 @@
                 mysqli_query($db, "update users set users.password='$nres' where users.iduser='$uss'");
                 include 'succsess.html';
                 include 'profile.php';
-                header("refresh: 2; url=http://localhost/ett%20laderas/code/profile.php");
+                header("refresh: 2; url=http://localhost/Ett-Laderas/code/profile.php");
 
             } else {
                 include 'alert.html';
                 include 'profile.php';
-                header("refresh: 2; url=http://localhost/ett%20laderas/code/profile.php");
+                header("refresh: 2; url=http://localhost/Ett-Laderas/code/profile.php");
 
 
             }
@@ -164,12 +164,24 @@ public function isIDemp($employee){
              $db=mysqli_connect("localhost","root","","ett_laderas");
              $sql="INSERT INTO `hiredemployees` (`dni`, `idoffer`) VALUES ('$dni', '$idoffer');";
              mysqli_query($db,$sql);
+
          }else echo "cant add employee to offer";
 
 
     }
 
+public function findoffer($idoffer){
+    $result=$this->getAllOffers();
+    if($result->num_rows>0){
+        while ($row=$result->fetch_assoc()){
+              if($row['idoffer']==$idoffer) return true;
 
+
+        }
+    }
+
+    return false;
+}
 
     public function  deleteOffer($off){
 
@@ -180,7 +192,15 @@ public function isIDemp($employee){
             return true;
 
     }
-
+public function addOffer($idoffer,$sector,$duration,$salary,$description){
+         if(!$this->findoffer($idoffer)){
+             $db=mysqli_connect("localhost","root","","ett_laderas");
+             $sql="INSERT INTO `joboffers` (`idoffer`, `sector`, `duration`, `salary`, `description`)
+               VALUES ('$idoffer', '$sector', '$duration', '$salary', '$description');";
+             mysqli_query($db,$sql);
+             return true;
+         }else return false;
+}
 
 
 }

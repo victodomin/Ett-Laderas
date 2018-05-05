@@ -33,7 +33,7 @@ $result=$data->getAllUsers();
 if (!$encontrado){
     include 'alert.html';
    require ('index.html');
-    header("refresh: 2; url=http://localhost/ett%20laderas/code/");
+    header("refresh: 2; url=http://localhost/Ett-Laderas/code/");
 
 }else{
     header('Location: maincontent.php');

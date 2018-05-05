@@ -58,7 +58,7 @@ include  'database.php';
 
 
 
-
+//ajax
                 if (isset($_GET['offer'])){
                     $off=$_GET['offer'];
                     $dats=new database();
@@ -88,8 +88,8 @@ include  'database.php';
             </div>
 
             <div class="row">
-                <div class="col-lg-12">
-                    <a class="btn btn-alert" href="actionoffer" </a>
+                <div class="col-lg-12" style="text-align: center">
+                    <a class="btn-primary"  href="addoffer.php">Add a new offer</a></br>
 
 
                 </div>
